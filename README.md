@@ -1,9 +1,24 @@
-# Mejoramiento de imagenes
+# Mejoramiento de imagenes con RealESRgan_x4plus y fsrcnn_x2
 
 El repositorio usa dos modelos de mejoramiento de imagenes:
 
 - fsrcnn_x2.pb
 - RealESRGAN_x4plus.pth
+
+
+### Screenshoots
+
+Imagen Original:
+
+![Imagen original](/screenshoots/nicolas.png)
+
+Imagen mejorada con RealESRgan:
+
+![Imagen mejorada](/screenshoots/nicolasmejorado.png)
+
+Imagen mejorada con fsrcnn_x2:
+
+![Imagen mejorada](/screenshoots/enhanced_face1.jpg)
 
 ## fsrcnn_x2.pb
 
@@ -90,3 +105,29 @@ eliminar ```, cached_download```
 ```
 2. Abrir degradations.py
 3. En la linea 8, o donde dice ```from torchvision.transforms.functional_tensor import rgb_to_grayscale``` cambiar por ```from torchvision._transforms.functional_tensor import rgb_to_grayscale```
+
+
+## Ejecutar scripts
+En este punto se asume que ya se hicieron todos los pasos anteriores, desde la creacion del entorno virtual, la activacion del mismo, la instalacion de dependencias y el arreglo de algunas librerias
+
+### practica.py
+Para ejecutar este script, se debe de abrir la terminal del proyecto y ejecutar el siguiente comando:
+
+```
+python practica.py
+```
+
+### Prueba_realesrgan.py
+Para ejecutar este script, se debe de abrir la terminal del proyecto y ejecutar el siguiente comando:
+```
+python Prueba_realesrgan.py
+```
+
+### Prueba_realesrgan2.py
+Para ejecutar este script, se debe de abrir la terminal del proyecto y ejecutar el siguiente comando **con los siguiente parametros**:
+
+``` 
+python Prueba_realesrgan2.py --input path_to_image/image.png --output path_to_save_image/image_name.png
+```
+
+Puedes probar con diferentes imagenes de diferentes formatos, solo debes asegurarte que tus imagenes esten en la carpeta con el nombre correcto
